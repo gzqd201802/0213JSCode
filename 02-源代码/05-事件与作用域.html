@@ -29,6 +29,9 @@
         btn02.onclick = function(){
             debugger;   // 程序运行的时候中断一下
             keyIndex++;
+            // 1. 事件处理函数作用域内没有 keyIndex 
+            // 2. 往函数外查找，函数外层是 script 作用域，script 作用域找到了 keyIndex，keyIndex++ 修改
+            // 小结：这里其实是修改了 script 级上的 keyIndex，输出的时候也是。
             console.log(keyIndex);
         }
         
