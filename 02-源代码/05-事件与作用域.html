@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn01"><左箭头</button>
+    <span>你是轮播图</span>
+    <button id="btn02">右箭头></button>
+    <script>
+
+        // F12 打开浏览器调试工具
+        // F5  刷新页面
+
+        debugger;   // 程序运行的时候中断一下
+        const btn01 = document.querySelector('#btn01');
+        const btn02 = document.querySelector('#btn02');
+
+        let keyIndex = 0;
+
+        btn01.onclick = function(){
+            debugger;   // 程序运行的时候中断一下
+            keyIndex--;
+            console.log(keyIndex);
+        }
+
+        btn02.onclick = function(){
+            debugger;   // 程序运行的时候中断一下
+            keyIndex++;
+            console.log(keyIndex);
+        }
+        
+        console.log(keyIndex);      // 0，只输出一次，就不再运行了
+        
+
+    </script>
+</body>
+</html>
