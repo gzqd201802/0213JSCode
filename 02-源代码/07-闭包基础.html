@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 概念：闭包是指有权访问另一个函数作用域中的变量的函数 - 红宝书
+        // 形成条件： 至少两个函数，嵌套关系，内部函数需要访问外部函数的变量/常量
+        debugger;
+        function fn1(){
+            let num = 10;
+            function fn2(){
+                console.log(num);
+            }
+            fn2();
+        }
+        fn1();
+
+    </script>
+</body>
+</html>
