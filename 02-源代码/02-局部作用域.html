@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 函数的参数
+        function func(num){
+            num = 30;
+            let aa = 10;
+            console.log(aa);
+            console.log(this);
+            console.log(arguments);
+        }
+
+        debugger;
+        func(11);     // 执行函数时，自动创建一个活动对象，由管理函数内部的局部变量
+        // 调用结束后，活动对象被销毁，所有的局部变量也都会被销毁。(内存垃圾回收)
+        
+        
+        // console.log(aa);
+
+    </script>
+</body>
+</html>

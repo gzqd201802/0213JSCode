@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 1
+        // f1函数写好了，作用域就定下来了，其实作用域链也就定下来了。
+        // f1函数作用域链： f1函数作用域 ==> 全局作用域链
+        
+        // let num = 123;
+        // function f1() {
+        //     console.log(num);
+        // }
+
+        // function f2() {
+        //     let num = 456;
+        //     f1();
+        // }
+        // f2();   // 123
+
+
+        // 2
+        /**/
+        let num = 123;
+    
+        function f1(num) {
+            // !! 函数的形参理解成函数内声明的局部变量
+            // let num;
+            console.log(num);   // undefined
+        }
+        function f2() {
+            let num = 456;
+            f1();
+        }
+        f2();
+
+
+
+        // 4
+        // var num1 = 10;
+        // var num2 = 20;
+
+        // function fn(num1) {
+        //     // var num1 = 实参； undefined
+        //     // var num3;
+
+        //     num1 = 100;         // 修改了局部num1为100
+        //     num2 = 200;         // 修改了全局num2为200
+        //     num3 = 300;         // 修改了局部num3为300
+        //     console.log(num1);  // 100
+        //     console.log(num2);  // 200
+        //     console.log(num3);  // 300
+        //     var num3;
+        // }
+        // fn();
+        // console.log(num1); // 10
+        // console.log(num2); // 200
+        // console.log(num3); // error
+    </script>
+</body>
+
+</html>

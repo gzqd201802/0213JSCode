@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 函数作用域只要这个函数写好了，作用域就已经定下来了
+
+        // 作用域链：
+        //  函数可以形成作用域，函数嵌套在另外一个函数中，外层的函数也有自己的作用域。
+        //  从里到外，直到全局作用域，形成的链式结构，叫做作用域链
+
+        // debugger;
+
+        let a = 1000;
+
+        function fn(){
+
+            let a = 100;
+
+            function inner(){
+
+                let a = 10;
+                console.log(a);
+            }
+
+            inner();
+        }
+
+        fn();
+    </script>
+</body>
+</html>

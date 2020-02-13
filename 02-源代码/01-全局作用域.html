@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 1. window 对象上的成员
+        console.log(document);
+        console.log(localStorage);
+
+
+        // 2. script 级声明的量
+        let aa = 10; 
+        const bb = [11, 22, 33];
+        
+        console.log(aa);
+        console.log(bb);
+        
+        console.log(aa === window.aa);  // false
+        console.log(bb === window.bb);  // false
+
+
+        // 补充：var 变量声明 和 function 函数声明 会添加到 window 对象上
+        var cc = 100;
+        function dd() { }
+        
+        console.log(cc);
+        console.log(dd);
+
+        console.log(cc === window.cc);  // true
+        console.log(dd === window.dd);  // true
+
+
+
+
+    </script>
+</body>
+
+</html>
